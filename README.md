@@ -1,1 +1,2 @@
-# html-css-js-project-boilerplate
+# Quizie
+A Quiz App built in JavaScript
