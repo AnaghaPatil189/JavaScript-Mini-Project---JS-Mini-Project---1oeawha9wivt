@@ -5,16 +5,19 @@ let score = 0
 const genres = [
     {
         name: 'Science & Nature',
-        id: 17
+        id: 17 ,
     },
+
     {
         name: 'General Knowledge',
         id: 9
     },
+
     {
         name: 'Science: Mathematics',
         id: 19
     },
+
     {
         name: 'Science: Computers',
         id: 18
@@ -104,3 +107,4 @@ function getResult() {
     }
     cardOfButton.removeEventListener('click',flipCard)
 }
+
