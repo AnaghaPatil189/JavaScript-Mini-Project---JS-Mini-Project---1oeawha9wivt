@@ -61,7 +61,6 @@ function addGenre(genre) {
 }
 genres.forEach(genre => addGenre(genre))
 
-
 function flipCard() {
     this.innerHTML = ''
     this.style.fontSize = '15px'
@@ -107,4 +106,3 @@ function getResult() {
     }
     cardOfButton.removeEventListener('click',flipCard)
 }
-
