@@ -2,7 +2,7 @@ const game = document.getElementById('game')
 const scoreDisplay = document.getElementById('score')
 let score = 0
 
-const genres = [
+const categories = [
     {
         name: 'Science & Nature',
         id: 17 ,
@@ -26,10 +26,10 @@ const genres = [
 
 const levels = ['easy', 'medium', 'hard']
 
-function addGenre(genre) {
+function addcategory(category) {
     const column = document.createElement('div')
-    column.classList.add('genre-column')
-    column.innerHTML = genre.name
+    column.classList.add('category-column')
+    column.innerHTML = category.name
     game.append(column)
 
     levels.forEach(level => {
@@ -47,7 +47,7 @@ function addGenre(genre) {
             card.innerHTML = 300
         }
 
-        fetch(`https://opentdb.com/api.php?amount=1&category=${genre.id}&difficulty=${level}&type=boolean`)
+        fetch(`https://opentdb.com/api.php?amount=1&category=${category.id}&difficulty=${level}&type=boolean`)
             .then(response => response.json())
             .then(data => {
                 console.log(data)
@@ -59,7 +59,7 @@ function addGenre(genre) {
 
     })
 }
-genres.forEach(genre => addGenre(genre))
+categories.forEach(category => addcategory(category))
 
 function flipCard() {
     this.innerHTML = ''
